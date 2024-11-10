@@ -7,16 +7,15 @@ import {
   Route,
 } from "react-router-dom"
 
-import Layout from './Components/Layout'
-import Home from './Components/Home'
+import Container from './Components/Container'
+import Home from './Pages/Home'
+import Resume from './Pages/Resume'
+import Github from './Pages/Github'
+import Contact from './Pages/Contact'
 
 
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyCXhz9pJ-NlWlIrFeJdQe_gAq44Lsu7lJc",
   authDomain: "website999-71344.firebaseapp.com",
@@ -26,17 +25,7 @@ const firebaseConfig = {
   appId: "1:792979793137:web:aa71583e42bfa476a03550"
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
-
-// console.log({app})
-
-
-
-
-
-
-
 
 function App() {
 
@@ -45,8 +34,15 @@ function App() {
       router={
         createBrowserRouter(createRoutesFromElements(
 
-          <Route path="/" element={<Layout />}>
+          <Route path="/" element={<Container />}>
             <Route index element={<Home />} />
+            <Route path="resume" element={<Resume />} />
+            <Route path="contact" element={<Contact />} />
+
+            <Route path="github" element={<Github />}>
+
+            </Route>
+
           </Route>
 
         ))
