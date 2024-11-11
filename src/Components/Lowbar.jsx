@@ -17,11 +17,10 @@ const cards = [
 ]
 
 const one = {
-  backgroundColor: 'blue',
-  display: 'grid',
-  gridTemplateColumns: 'repeat(4, 1fr)',
-  gap: '20px',
+  display: 'flex',
   justifyContent: 'center',
+  alignItems: 'center',
+  margin: '.3rem',
 }
 
 function Lowbar() {

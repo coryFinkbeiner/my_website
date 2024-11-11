@@ -1,8 +1,16 @@
 import React from 'react'
 
+const one = {
+  backgroundColor: 'green',
+  height: '100%',
+
+}
+
 function Home() {
   return (
-    <div>Home</div>
+    <div style={one}>
+      Home
+    </div>
   )
 }
 

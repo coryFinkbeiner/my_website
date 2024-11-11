@@ -1,22 +1,16 @@
-
-
-
- :root {
-
-  background-color: #242424;
+:root {
+  background-color: rgb(25, 39, 2);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-grow: 1;
   font-size: 16px;
-
-
 }
 
 .App {
-  width: 63rem; /* Fixed width */
-  max-width: 90%; /* Limit maximum width */
-  margin: 0 auto; /* Center the element horizontally */
-  background-color: aqua;
+  width: 63rem;
+  max-width: 90%;
+  margin: 0 auto;
   height: 97vh;
+  max-height: 90%;
 }
