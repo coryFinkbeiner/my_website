@@ -30,24 +30,26 @@ const app = initializeApp(firebaseConfig);
 function App() {
 
   return (
-    <RouterProvider
-      router={
-        createBrowserRouter(createRoutesFromElements(
+    <div className='App'>
+      <RouterProvider
+        router={
+          createBrowserRouter(createRoutesFromElements(
 
-          <Route path="/" element={<Container />}>
-            <Route index element={<Home />} />
-            <Route path="resume" element={<Resume />} />
-            <Route path="contact" element={<Contact />} />
+            <Route path="/" element={<Container />}>
+              <Route index element={<Home />} />
+              <Route path="resume" element={<Resume />} />
+              <Route path="contact" element={<Contact />} />
 
-            <Route path="github" element={<Github />}>
+              <Route path="github" element={<Github />}>
+
+              </Route>
 
             </Route>
 
-          </Route>
-
-        ))
-      }
-    />
+          ))
+        }
+      />
+    </div>
   )
 }
 

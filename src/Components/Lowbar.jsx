@@ -16,13 +16,6 @@ const cards = [
   }
 ]
 
-// const cards = [
-//   'Home',
-//   'Rez',
-//   'Github',
-//   'Contact',
-// ]
-
 const one = {
   backgroundColor: 'blue',
   display: 'grid',
