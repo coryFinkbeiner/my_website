@@ -10,10 +10,8 @@ const one = {
   margin: 'auto',
   display: 'grid',
   gridTemplateRows: '5fr 1fr',
-  overflow: 'hidden',
   border: '2rem solid grey',
-  borderRadius: '2rem'
-
+  borderRadius: '2rem',
 }
 
 
@@ -22,7 +20,10 @@ function Container() {
 
     <div style={one}>
 
-      <Outlet />
+      <Outlet
+        style={{
+        }}
+      />
       <Lowbar />
 
     </div>
