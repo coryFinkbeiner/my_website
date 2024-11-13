@@ -1,18 +1,24 @@
 import React from 'react'
 import Card from './Card'
+import { FaGithub, FaHome, FaPen  } from 'react-icons/fa';
+import { FaRegNewspaper } from "react-icons/fa6";
 
 const cards = [
   {
-    route: '/'
+    route: '/',
+    icon: <FaHome />
   },
   {
-    route: '/resume'
+    route: '/resume',
+    icon: <FaRegNewspaper />
   },
   {
-    route: '/github'
+    route: '/github',
+    icon: <FaGithub />
   },
   {
-    route: '/contact'
+    route: '/contact',
+    icon: <FaPen />
   }
 ]
 
@@ -27,7 +33,7 @@ function Lowbar() {
   return (
     <div style={one}>
       {cards.map((card, index) => (
-        <Card route={card.route} key={index}/>
+        <Card route={card.route} icon={card.icon} key={index}/>
       ))}
     </div>
   )
