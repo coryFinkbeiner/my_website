@@ -7,11 +7,11 @@ function Contact() {
       color: '#e0e0e0',
       fontFamily: 'Arial, sans-serif',
       lineHeight: 1.6,
-      padding: '20px',
       position: 'relative',
       height: '100%',
       display: 'flex',
       flexDirection: 'column',
+      overflow: 'auto',
     },
     contact: {
       maxWidth: '800px',
