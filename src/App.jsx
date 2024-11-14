@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 import {
   RouterProvider,
@@ -15,6 +15,7 @@ import Contact from './Pages/Contact'
 
 
 import { initializeApp } from "firebase/app";
+import { getFirestore, doc, setDoc, getDoc, } from 'firebase/firestore';
 
 const firebaseConfig = {
   apiKey: "AIzaSyCXhz9pJ-NlWlIrFeJdQe_gAq44Lsu7lJc",
@@ -26,8 +27,22 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+
 
 function App() {
+
+  useEffect(() => {
+    const postData = async () => {
+      const docRef = doc(db, 'test', 'test1'); // Update collection and document path if needed
+      await setDoc(docRef, { message: 'dog' });
+      console.log('Data added successfully!');
+    };
+
+    postData();
+  }, []);
+
 
   return (
     <div className='App'>
