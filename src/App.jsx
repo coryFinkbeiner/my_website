@@ -13,6 +13,10 @@ import Resume from './Pages/Resume'
 import Github from './Pages/Github'
 import Contact from './Pages/Contact'
 
+import Project1 from './SubPages/Project1'
+import Project2 from './SubPages/Project2'
+import Project3 from './SubPages/Project3'
+
 function App() {
 
   return (
@@ -27,7 +31,9 @@ function App() {
               <Route path="contact" element={<Contact />} />
 
               <Route path="github" element={<Github />}>
-
+                <Route path="project1" element={<Project1 />}/>
+                <Route path="project2" element={<Project2 />}/>
+                <Route path="project3" element={<Project3 />}/>
               </Route>
 
             </Route>
