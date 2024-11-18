@@ -1,6 +1,13 @@
-import React from 'react'
+import { useState, useEffect } from 'react'
+import { doc, setDoc, getDoc, } from 'firebase/firestore'
+import { db } from '../FirebaseConfig'
 
 function Contact() {
+
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+
   const styles = {
     body: {
       backgroundColor: '#121212',
@@ -95,17 +102,23 @@ function Contact() {
         <form style={styles.form}>
           <div style={styles.inputGroup}>
             <label htmlFor="name" style={styles.label}>Name:</label>
-            <input type="text" id="name" name="name" style={styles.input} required />
+            <input  type="text" id="name" name="name" style={styles.input} required
+              onChange={(e) => setName(e.target.value)}
+            />
           </div>
 
           <div style={styles.inputGroup}>
             <label htmlFor="email" style={styles.label}>Email:</label>
-            <input type="email" id="email" name="email" style={styles.input} required />
+            <input type="email" id="email" name="email" style={styles.input} required
+              onChange={(e) => setEmail(e.target.value)}
+            />
           </div>
 
           <div style={styles.inputGroup}>
             <label htmlFor="body" style={styles.label}>Message:</label>
-            <textarea id="body" name="body" style={styles.textarea} required></textarea>
+            <textarea id="body" name="body" style={styles.textarea} required
+              onChange={(e) => setMessage(e.target.value)}
+            ></textarea>
           </div>
         </form>
 
@@ -114,10 +127,13 @@ function Contact() {
 
         <button style={styles.sendButton} aria-label="Send Message"
           onClick={() => {
-            console.log('Yo')
+            (async () => {
+              const docRef = doc(db, 'test', name); // Update collection and document path if needed
+              await setDoc(docRef, { email, message });
+              console.log('Data added successfully!');
+            })();
           }}
         >
-
           Send
         </button>
 
