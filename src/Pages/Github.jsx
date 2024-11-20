@@ -1,15 +1,28 @@
-import React from 'react'
-import { Outlet, Link } from 'react-router-dom'
-import { FaGithub } from 'react-icons/fa';
+import React, { useState, useEffect } from 'react'
+import { Outlet, NavLink, useLocation } from 'react-router-dom'
+import { FaGithub } from 'react-icons/fa'
 
 
-const ProjectLink = ({ name, path }) => {
-  return (
-    <Link to={path} style={{ textDecoration: 'none' }}>
-      <div style={{ height: '100%' }}>{name}</div>
-    </Link>
-  );
-};
+const ProjectLink = ({ name, path }) => (
+  <NavLink
+    to={path}
+    style={({ isActive }) => ({
+      textDecoration: 'none',
+      height: '100%',
+      color: 'white',
+      fontSize: '1.7rem',
+      textAlign: 'center',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      fontFamily: 'Arial, sans-serif',
+      cursor: 'pointer',
+      backgroundColor: isActive ? '#2b3746' : 'transparent',
+      borderRadius: '1rem',
+      margin: '.5rem',
+    })}
+  >{name}</NavLink>
+);
 
 function Github() {
   return (
@@ -25,22 +38,27 @@ function Github() {
         style={{
           display: 'grid',
           gridTemplateColumns: '.25fr 1fr 1fr 1fr',
+          margin: '.3rem',
+          padding: '.3rem'
         }}
       >
 
       <FaGithub
         style={{
           color: 'white',
+          display: 'flex',
           justifySelf: 'center',
           alignSelf: 'center',
           fontSize: '2.8rem',
+          cursor: 'pointer',
+          marginTop: '.6rem'
         }}
         onClick={() => window.open('https://github.com/coryFinkbeiner', '_blank', 'noopener,noreferrer')}
       />
 
-        <ProjectLink key={'Project1'} name={'Project1'} path={'/github/project1'} />
-        <ProjectLink key={'Project1'} name={'Project1'} path={'/github/project2'} />
-        <ProjectLink key={'Project1'} name={'Project1'} path={'/github/project3'} />
+      <ProjectLink key={'project1'} name={'Spotify App'} path={'/github/project1'} />
+      <ProjectLink key={'project2'} name={'This Website'} path={'/github/project2'} />
+      <ProjectLink key={'project3'} name={'Decide'} path={'/github/project3'} />
 
       </div>
 
