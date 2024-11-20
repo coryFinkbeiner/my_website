@@ -58,7 +58,7 @@ function Github() {
 
       <ProjectLink key={'project1'} name={'Spotify App'} path={'/github/project1'} />
       <ProjectLink key={'project2'} name={'This Website'} path={'/github/project2'} />
-      <ProjectLink key={'project3'} name={'Decide'} path={'/github/project3'} />
+      <ProjectLink key={'project3'} name={'Donation Site'} path={'/github/project3'} />
 
       </div>
 

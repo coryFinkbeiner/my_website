@@ -4,6 +4,7 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
   Route,
+  Navigate,
 } from "react-router-dom"
 import Container from './Components/Container'
 import Home from './Pages/Home'
@@ -28,9 +29,10 @@ function App() {
               <Route path="contact" element={<Contact />} />
 
               <Route path="github" element={<Github />}>
-                <Route path="project1" element={<Project1 />}/>
+                <Route path='project1' element={<Project1 />}/>
                 <Route path="project2" element={<Project2 />}/>
                 <Route path="project3" element={<Project3 />}/>
+                <Route index element={<Navigate to="/github/project1" />} />
               </Route>
 
             </Route>

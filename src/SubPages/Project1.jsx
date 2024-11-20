@@ -2,7 +2,9 @@ import React from 'react'
 
 function Project1() {
   return (
-    <div>Project1</div>
+    <div
+      style={{backgroundColor: 'white'}}
+    >Project1</div>
   )
 }
 
