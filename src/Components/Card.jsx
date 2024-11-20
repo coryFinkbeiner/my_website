@@ -1,5 +1,5 @@
-import React from 'react'
-import { Link } from "react-router-dom"
+import React, { useState, useEffect } from 'react'
+import { NavLink, useLocation } from "react-router-dom"
 
 
 
@@ -12,15 +12,31 @@ const one = {
   margin: '.3rem',
   display: 'grid',
   gridTemplateRows: '1fr 3fr 1fr',
-  // padding: '.5rem'
-
 }
 
+
+
 function Card({ route, icon }) {
-  return (
-    <Link style={one}
-      to={route}
-    >
+
+  // const [ isChosen, setIsChosen ] = useState(false)
+
+  console.log(useLocation())
+
+  // const location = useLocation()
+
+  // useEffect(() => {
+  //   setIsChosen(false)
+  //   if (location.pathname === route) setIsChosen(true)
+  // }, [isChosen, route])
+
+
+
+
+
+
+
+  const Front = () => (
+    <>
       <div
         style={{
           justifySelf: 'start',
@@ -50,7 +66,26 @@ function Card({ route, icon }) {
       >
         {icon}
       </div>
-    </Link>
+    </>
+  )
+
+  const Back = () => (
+    <div>
+      asdfasd
+    </div>
+  )
+
+
+
+  return (
+    <NavLink
+      style={one}
+
+      to={route}
+    >
+      {'/' + useLocation().pathname.split('/')[1] === route ? <Back /> : <Front /> }
+
+    </NavLink>
   )
 }
 
