@@ -2,6 +2,15 @@ import React from 'react'
 import { Outlet, Link } from 'react-router-dom'
 import { FaGithub } from 'react-icons/fa';
 
+
+const ProjectLink = ({ name, path }) => {
+  return (
+    <Link to={path} style={{ textDecoration: 'none' }}>
+      <div style={{ height: '100%' }}>{name}</div>
+    </Link>
+  );
+};
+
 function Github() {
   return (
     <div
@@ -9,13 +18,13 @@ function Github() {
         display: 'grid',
         gridTemplateRows: '1fr 20fr',
         backgroundColor: '#0d1117',
+        overflow: 'auto',
       }}
     >
       <div
         style={{
           display: 'grid',
           gridTemplateColumns: '.25fr 1fr 1fr 1fr',
-          // backgroundColor: 'black',
         }}
       >
 
@@ -29,41 +38,10 @@ function Github() {
         onClick={() => window.open('https://github.com/coryFinkbeiner', '_blank', 'noopener,noreferrer')}
       />
 
+        <ProjectLink key={'Project1'} name={'Project1'} path={'/github/project1'} />
+        <ProjectLink key={'Project1'} name={'Project1'} path={'/github/project2'} />
+        <ProjectLink key={'Project1'} name={'Project1'} path={'/github/project3'} />
 
-
-        <Link to='/github/project1'
-          style={{ textDecoration: 'none' }}
-        >
-          <div
-            style={{
-              backgroundColor: 'black',
-              height: '100%'
-            }}
-          >Project1
-          </div>
-        </Link>
-        <Link to='/github/project2'
-          style={{ textDecoration: 'none' }}
-        >
-          <div
-            style={{
-              backgroundColor: 'blue',
-              height: '100%'
-            }}
-          >Project2
-          </div>
-        </Link>
-        <Link to='/github/project3'
-          style={{ textDecoration: 'none' }}
-        >
-          <div
-            style={{
-              backgroundColor: 'red',
-              height: '100%'
-            }}
-          >project3can y
-          </div>
-        </Link>
       </div>
 
       <Outlet />

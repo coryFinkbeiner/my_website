@@ -1,18 +1,15 @@
 import { useState, useEffect } from 'react'
-
 import {
   RouterProvider,
   createBrowserRouter,
   createRoutesFromElements,
   Route,
 } from "react-router-dom"
-
 import Container from './Components/Container'
 import Home from './Pages/Home'
 import Resume from './Pages/Resume'
 import Github from './Pages/Github'
 import Contact from './Pages/Contact'
-
 import Project1 from './SubPages/Project1'
 import Project2 from './SubPages/Project2'
 import Project3 from './SubPages/Project3'
