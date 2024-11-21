@@ -43,22 +43,22 @@ function Github() {
         }}
       >
 
-      <FaGithub
-        style={{
-          color: 'white',
-          display: 'flex',
-          justifySelf: 'center',
-          alignSelf: 'center',
-          fontSize: '2.8rem',
-          cursor: 'pointer',
-          marginTop: '.6rem'
-        }}
-        onClick={() => window.open('https://github.com/coryFinkbeiner', '_blank', 'noopener,noreferrer')}
-      />
+        <FaGithub
+          style={{
+            color: 'white',
+            display: 'flex',
+            justifySelf: 'center',
+            alignSelf: 'center',
+            fontSize: '2.8rem',
+            cursor: 'pointer',
+            marginTop: '.6rem'
+          }}
+          onClick={() => window.open('https://github.com/coryFinkbeiner', '_blank', 'noopener,noreferrer')}
+        />
 
-      <ProjectLink key={'project1'} name={'Spotify App'} path={'/github/project1'} />
-      <ProjectLink key={'project2'} name={'This Website'} path={'/github/project2'} />
-      <ProjectLink key={'project3'} name={'Donation Site'} path={'/github/project3'} />
+        <ProjectLink key={'project1'} name={'Spotify App'} path={'/github/project1'} />
+        <ProjectLink key={'project2'} name={'This Website'} path={'/github/project2'} />
+        <ProjectLink key={'project3'} name={'Donation Site'} path={'/github/project3'} />
 
       </div>
 

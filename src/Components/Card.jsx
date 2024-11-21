@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { NavLink, useLocation } from "react-router-dom"
+import CardDesign from '../Images/CardDesign.jpg';
 
 
 
@@ -7,36 +8,23 @@ const one = {
   backgroundColor: 'white',
   textDecoration: 'none',
   width: '11rem',
-  height: '100%',
+  height: '15rem',
   borderRadius: '1rem',
   margin: '.3rem',
-  display: 'grid',
-  gridTemplateRows: '1fr 3fr 1fr',
+  padding: '.2rem'
 }
 
 
 
 function Card({ route, icon }) {
 
-  // const [ isChosen, setIsChosen ] = useState(false)
-
-  console.log(useLocation())
-
-  // const location = useLocation()
-
-  // useEffect(() => {
-  //   setIsChosen(false)
-  //   if (location.pathname === route) setIsChosen(true)
-  // }, [isChosen, route])
-
-
-
-
-
-
-
   const Front = () => (
-    <>
+    <div
+      style={{
+        display: 'grid',
+        gridTemplateRows: '1fr 3fr 1fr',
+      }}
+    >
       <div
         style={{
           justifySelf: 'start',
@@ -66,12 +54,23 @@ function Card({ route, icon }) {
       >
         {icon}
       </div>
-    </>
+    </div>
+
   )
 
   const Back = () => (
-    <div>
-      asdfasd
+    <div
+      style={{
+        height: '90%'
+      }}
+    >
+      <img src={CardDesign} alt="Card Design"
+        style={{
+          width: '100%',
+          // height: '100%',
+          borderRadius: '1rem',
+          objectFit: 'cover',
+        }}/>
     </div>
   )
 
@@ -80,7 +79,6 @@ function Card({ route, icon }) {
   return (
     <NavLink
       style={one}
-
       to={route}
     >
       {'/' + useLocation().pathname.split('/')[1] === route ? <Back /> : <Front /> }
