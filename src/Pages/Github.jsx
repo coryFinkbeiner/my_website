@@ -18,7 +18,6 @@ const ProjectLink = ({ name, path }) => (
       cursor: 'pointer',
       backgroundColor: isActive ? '#2b3746' : 'transparent',
       borderRadius: '1rem',
-      // margin: '.5rem',
     })}
   >{name}</NavLink>
 );

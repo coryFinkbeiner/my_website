@@ -1,14 +1,13 @@
 import React from 'react'
 
-function ReadMe({ children, name }) {
+function ReadMe({ children, name, url }) {
   return (
     <div
       style={{
         display: 'grid',
         gridTemplateRows: '1fr 19fr',
-
         backgroundColor: '#161b22',
-        margin: '1.2rem'
+        margin: '1.03rem'
       }}
     >
       <div
@@ -22,27 +21,28 @@ function ReadMe({ children, name }) {
         }}
       >
         <div
+          className={'name-link'}
           style={{
             color: 'rgb(68, 147, 248)',
             fontFamily: 'Arial, sans-serif',
             fontWeight: 'bold',
-            ursor: 'pointer',
+            cursor: 'pointer',
           }}
+          onClick={() => window.open(url)}
 
         >{name}</div>
         <div
+
           style={{
             color: 'white',
             fontFamily: 'Arial, sans-serif',
             fontWeight: 'bold',
           }}
-        >/&nbsp; README</div>
+        >/&nbsp; Read Me</div>
       </div>
       <div
         style={{
-          // backgroundColor: 'brown',
           border: '.01rem solid grey',
-          // margin: '1.2rem'
         }}
       >
         {children}

@@ -1,10 +1,17 @@
 import React from 'react'
+import ReadMe from '../Components/Readme'
 
 function Project1() {
   return (
-    <div
-      style={{}}
-    >Project1</div>
+    <ReadMe
+      name={'spotter'}
+      url={'https://github.com/coryFinkbeiner/spotter/tree/boot'}
+
+    >
+      <div
+        style={{}}
+      >Project1</div>
+    </ReadMe>
   )
 }
 

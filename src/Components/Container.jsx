@@ -3,7 +3,6 @@ import { Outlet } from 'react-router-dom'
 import Lowbar from '../Components/Lowbar'
 
 const one = {
-  // backgroundColor: 'red',
   height: '97%',
   width: '100%',
   overflow: 'hidden',
@@ -20,10 +19,7 @@ function Container() {
 
     <div style={one}>
 
-      <Outlet
-        style={{
-        }}
-      />
+      <Outlet/>
       <Lowbar />
 
     </div>

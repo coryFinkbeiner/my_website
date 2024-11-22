@@ -15,29 +15,7 @@
   max-height: 90%;
 }
 
-.github-container {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-}
-
-.github-header {
-  background-color: #0b1018;
-  color: #fff;
-  padding: 10px;
-  display: flex;
-  align-items: center;
-}
-
-.github-link {
-  color: #2b3746;
-  text-decoration: none;
-  margin-right: 20px;
-  padding: 10px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease-in-out;
-}
-
-.github-link:hover {
-  background-color: #30363d;
+.name-link:hover {
+  text-decoration: underline;
+  font-weight: bold;
 }
