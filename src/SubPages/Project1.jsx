@@ -3,7 +3,7 @@ import React from 'react'
 function Project1() {
   return (
     <div
-      style={{backgroundColor: 'white'}}
+      style={{}}
     >Project1</div>
   )
 }

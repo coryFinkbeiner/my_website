@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react'
 import { NavLink, useLocation } from "react-router-dom"
 import CardDesign from '../Images/CardDesign.jpg';
 
-
-
 const one = {
   backgroundColor: 'white',
   textDecoration: 'none',
@@ -14,8 +12,6 @@ const one = {
   padding: '.2rem'
 }
 
-
-
 function Card({ route, icon }) {
 
   const Front = () => (
@@ -23,6 +19,7 @@ function Card({ route, icon }) {
       style={{
         display: 'grid',
         gridTemplateRows: '1fr 3fr 1fr',
+
       }}
     >
       <div
@@ -55,7 +52,6 @@ function Card({ route, icon }) {
         {icon}
       </div>
     </div>
-
   )
 
   const Back = () => (
@@ -69,12 +65,10 @@ function Card({ route, icon }) {
           width: '100%',
           // height: '100%',
           borderRadius: '1rem',
-          objectFit: 'cover',
+          objectFit: 'contain',
         }}/>
     </div>
   )
-
-
 
   return (
     <NavLink
@@ -82,7 +76,6 @@ function Card({ route, icon }) {
       to={route}
     >
       {'/' + useLocation().pathname.split('/')[1] === route ? <Back /> : <Front /> }
-
     </NavLink>
   )
 }

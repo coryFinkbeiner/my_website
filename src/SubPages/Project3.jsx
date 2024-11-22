@@ -1,15 +1,15 @@
 import React from 'react'
+import ReadMe from '../Components/Readme'
 
 function Project3() {
   return (
-    <div>
-      <iframe
-      src="coryfinkbeiner.github.io/my_website"
-      title="GreeneOcean Project README"
-      width="800" // Optional: Set a width for the iframe
-      height="600" // Optional: Set a height for the iframe
-    />
-    </div>
+    <ReadMe
+      name={'Project_Greene'}
+    >
+      <div>
+        3333333
+      </div>
+    </ReadMe>
   )
 }
 
