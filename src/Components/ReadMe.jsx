@@ -44,7 +44,8 @@ function ReadMe({ children, name, url }) {
         style={{
           border: '.01rem solid grey',
           overflow: 'auto',
-          backgroundColor: 'white'
+          backgroundColor: 'white',
+          overflow: 'hidden',
         }}
       >
         {children}

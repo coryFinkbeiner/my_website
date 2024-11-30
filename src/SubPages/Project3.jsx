@@ -1,5 +1,9 @@
 import React from 'react'
 import ReadMe from '../Components/Readme'
+import login from '../Images/login.jpeg';
+import donate from '../Images/donate.gif';
+import map from '../Images/map.gif';
+import videoChat from '../Images/videoChat.gif';
 
 function Project3() {
   return (
@@ -23,19 +27,19 @@ function Project3() {
         <ul>
           <li>As a user you should be able to sign-up/login with a secure username and password.</li>
         </ul>
-        <img src="images/login.jpeg" alt="Login image" />
+        <img src={login} alt="Login image" style={{ maxWidth: '100%', height: 'auto' }} />
         <ul>
           <li>As a signed in user you should be able to donate items.</li>
         </ul>
-        <img src="images/donate.gif" alt="Donate gif" />
+        <img src={donate} alt="Donate gif" style={{ maxWidth: '100%', height: 'auto' }}/>
         <ul>
           <li>As a signed in user you should be able to browse items in your area.</li>
         </ul>
-        <img src="images/map.gif" alt="Map gif" />
+        <img src={map} alt="Map gif" style={{ maxWidth: '100%', height: 'auto' }}/>
         <ul>
           <li>As a signed in user you should be able to view your donated items, items you&apos;d expressed interest in, approved items, history of your transactions and chat with other users.</li>
         </ul>
-        <img src="images/videoChat.gif" alt="Video chat gif" />
+        <img src={videoChat} alt="Video chat gif" style={{ maxWidth: '100%', height: 'auto' }}/>
 
         <h2>Technologies</h2>
         <img src="https://img.shields.io/badge/-React-61DAFB?logo=react&logoColor=white&style=for-the-badge" alt="React" />
