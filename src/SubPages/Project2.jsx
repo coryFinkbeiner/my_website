@@ -6,7 +6,6 @@ function Project2() {
     <ReadMe
       name={'my_website'}
       url={'https://github.com/coryFinkbeiner/my_website/tree/dev'}
-
     >
       <div
         style={{}}
@@ -15,4 +14,4 @@ function Project2() {
   )
 }
 
-export default Project1
+export default Project2

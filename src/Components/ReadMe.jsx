@@ -43,6 +43,8 @@ function ReadMe({ children, name, url }) {
       <div
         style={{
           border: '.01rem solid grey',
+          overflow: 'auto',
+          backgroundColor: 'white'
         }}
       >
         {children}

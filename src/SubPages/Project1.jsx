@@ -6,7 +6,6 @@ function Project1() {
     <ReadMe
       name={'spotter'}
       url={'https://github.com/coryFinkbeiner/spotter/tree/boot'}
-
     >
       <div
         style={{}}

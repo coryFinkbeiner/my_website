@@ -1,9 +1,5 @@
 import React from 'react'
 
-// import { storage } from '../firebaseConfig'
-
-// console.log(storage)
-
 function Resume() {
 
   const downloadButtonStyle = {
