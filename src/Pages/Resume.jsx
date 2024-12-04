@@ -37,10 +37,9 @@ function Resume() {
       lineHeight: 1.6,
       padding: '20px',
       position: 'relative',
-      overflow: 'auto'
+      overflow: 'auto',
     },
     resume: {
-      // maxWidth: '800px',
       margin: '0 auto',
     },
     header: {

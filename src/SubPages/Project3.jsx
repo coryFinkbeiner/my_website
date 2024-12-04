@@ -10,11 +10,8 @@ function Project3() {
     <ReadMe
       name={'Project_Greene'}
       url={'https://github.com/GreeneOcean/Project_Greene/blob/dev/README.md'}
-      style={{
-        backgroundColor: 'white'
-      }}
     >
-      <>
+
         <h2>About</h2>
         <p>Greene Ocean seeks connect people in need with those more fortunate through technology. Our web application provides a platform for perspective donors to create an account (authentication achieved without the use of an external API), post their donations and upload photos of their donations. Donors have the ability to live chat and/or video chat with perspective recipients before approving the transaction, allowing greater control over where their donation is going. Likewise, donation recipients have the ability to browse available donations in their area and claim items based on their individual needs and circumstances. Integration with Google Maps API makes browsing easy. Charities have the option to claim exclusive donations marked as for charity only.</p>
 
@@ -80,7 +77,7 @@ function Project3() {
         <h4><code>npm run server:dev</code></h4>
         <p>Launches the server and uses Nodemon to monitor for any file changes. If any file changes are detected with Nodemon, it will automatically restart the node server.<br />
         Server will be listening on <a href="http://localhost:8080">http://localhost:8080</a></p>
-      </>
+
     </ReadMe>
   )
 }

@@ -29,7 +29,7 @@ function Github() {
         display: 'grid',
         gridTemplateRows: '1fr 15fr',
         backgroundColor: '#161b22',
-        overflow: 'auto',
+        // overflow: 'auto',
       }}
     >
       <div

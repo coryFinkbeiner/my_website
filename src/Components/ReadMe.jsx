@@ -7,7 +7,8 @@ function ReadMe({ children, name, url }) {
         display: 'grid',
         gridTemplateRows: '1fr 19fr',
         backgroundColor: '#161b22',
-        margin: '1.03rem'
+        margin: '1.03rem',
+        height: '100%'
       }}
     >
       <div
@@ -45,7 +46,9 @@ function ReadMe({ children, name, url }) {
           border: '.01rem solid grey',
           overflow: 'auto',
           backgroundColor: 'white',
-          overflow: 'hidden',
+          maxHeight: '64vh'
+          // height: '100%'
+          // flex: 1,
         }}
       >
         {children}
