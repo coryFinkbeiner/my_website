@@ -5,7 +5,7 @@ import Lowbar from '../Components/Lowbar'
 const one = {
   height: '97%',
   width: '100%',
-  overflow: 'hidden',
+  overflow: 'auto',
   margin: 'auto',
   display: 'grid',
   gridTemplateRows: '5fr 1fr',

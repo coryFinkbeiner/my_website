@@ -19,7 +19,6 @@ function Card({ route, icon }) {
       style={{
         display: 'grid',
         gridTemplateRows: '1fr 3fr 1fr',
-
       }}
     >
       <div
