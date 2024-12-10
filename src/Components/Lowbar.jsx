@@ -27,9 +27,6 @@ const one = {
   justifyContent: 'center',
   alignItems: 'center',
   margin: '.3rem',
-  // position: 'fixed',
-  // bottom: '0'
-  // height: '30vh'
 }
 
 function Lowbar() {
