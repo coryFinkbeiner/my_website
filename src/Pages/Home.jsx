@@ -1,11 +1,13 @@
 import React from 'react'
-
 import { RiNextjsFill } from "react-icons/ri";
 import { IoLogoJavascript } from "react-icons/io5";
+import { FaReact } from "react-icons/fa";
+import { FaNode } from "react-icons/fa";
 import Face from '../Images/Face.jpg';
-
-
-
+import BlueCard from '../Images/BlueCard.jpg';
+import { SiMongodb } from "react-icons/si";
+import { FaHtml5 } from "react-icons/fa";
+import { AiOutlineConsoleSql } from "react-icons/ai";
 
   const Card = ({icon}) => (
     <div
@@ -53,8 +55,6 @@ const cardStyles = {
 
 const skillCardStyles = {
   height: '14rem',
-  // width: '11rem',
-  // height: '15rem',
   width: '10rem',
   borderRadius: '1rem',
 
@@ -64,27 +64,18 @@ function Home() {
   return (
     <div style={{
       backgroundColor: 'green',
-      // height: '100%',
-      // maxHeight: '100%',
       display: 'grid',
       gridTemplateRows: '1fr 2fr',
     }}>
-
-
       <div
         style={{
           display: 'grid',
           gridTemplateColumns: '1fr 1fr 1fr 1fr',
           gap: '1rem',
-          // justifyContent: 'center',
-          // alignItems: 'center',
           padding: '1rem',
         }}
       >
-
         <div></div>
-
-
         <img src={Face} alt="Face"
           style={{
             width: '14.5rem',
@@ -142,12 +133,15 @@ function Home() {
           }}
         >
           <div
-            style={{
-              ...skillCardStyles,
-              backgroundColor: 'white',
-            }}
+            style={{ ...skillCardStyles }}
           >
-
+            <img src={BlueCard} alt="BlueCard"
+              style={{
+                width: '100%',
+                borderRadius: '1rem',
+                objectFit: 'contain',
+              }}
+            />
           </div>
           <div
             style={{
@@ -163,6 +157,48 @@ function Home() {
               backgroundColor: 'white',
             }}
           >
+            <Card icon={<FaReact />} />
+          </div>
+          <div
+            style={{
+              ...skillCardStyles,
+              backgroundColor: 'white',
+            }}
+          >
+            <Card icon={<FaNode />} />
+          </div>
+
+        </div>
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: '1fr 1fr 1fr 1fr',
+            placeItems: 'center',
+          }}
+        >
+          <div
+            style={{
+              ...skillCardStyles,
+              backgroundColor: 'white',
+            }}
+          >
+            <Card icon={<FaHtml5 />} />
+          </div>
+          <div
+            style={{
+              ...skillCardStyles,
+              backgroundColor: 'white',
+            }}
+          >
+            <Card icon={<AiOutlineConsoleSql />} />
+          </div>
+          <div
+            style={{
+              ...skillCardStyles,
+              backgroundColor: 'white',
+            }}
+          >
+            <Card icon={<SiMongodb />} />
           </div>
           <div
             style={{
@@ -172,13 +208,6 @@ function Home() {
           >
             <Card icon={<RiNextjsFill />} />
           </div>
-
-        </div>
-        <div
-          style={{
-            backgroundColor: 'white',
-          }}
-        >
 
         </div>
       </div>

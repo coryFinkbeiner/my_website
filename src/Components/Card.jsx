@@ -56,7 +56,8 @@ function Card({ route, icon }) {
   const Back = () => (
     <div
       style={{
-        height: '90%'
+        height: '90%',
+        backgroundColor: 'white'
       }}
     >
       <img src={CardDesign} alt="Card Design"
