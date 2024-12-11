@@ -1,11 +1,6 @@
-import React from 'react'
-
 function Resume() {
 
   const downloadButtonStyle = {
-    position: 'fixed',
-    top: '20px',
-    right: '20px',
     backgroundColor: '#bb86fc',
     color: '#121212',
     border: 'none',

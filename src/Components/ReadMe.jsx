@@ -46,7 +46,7 @@ function ReadMe({ children, name, url }) {
           border: '.01rem solid grey',
           overflow: 'auto',
           backgroundColor: 'white',
-          maxHeight: '64vh',
+          maxHeight: '58vh',
           // height: '100%'
           // flex: 1,
         }}
