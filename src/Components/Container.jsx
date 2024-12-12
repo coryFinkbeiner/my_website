@@ -6,7 +6,7 @@ const one = {
   height: '97%',
   width: '100%',
   overflow: 'auto',
-  margin: 'auto',
+  // margin: '1rem',
   display: 'grid',
   gridTemplateRows: '5fr 1fr',
   border: '2rem solid grey',

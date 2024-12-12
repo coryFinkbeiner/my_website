@@ -82,7 +82,6 @@ function Home() {
             height: '100%',
             borderRadius: '1rem',
             objectFit: 'cover',
-            // display: 'block'
           }}
         />
 

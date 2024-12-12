@@ -65,7 +65,7 @@ function Card({ route, icon }) {
           width: '100%',
           // height: '100%',
           borderRadius: '1rem',
-          objectFit: 'contain',
+          objectFit: 'cover',
         }}/>
     </div>
   )

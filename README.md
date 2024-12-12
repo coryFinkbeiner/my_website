@@ -1,8 +1,50 @@
-# React + Vite
+# Personal Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Home Page](./Images/Home.jpg)
 
-Currently, two official plugins are available:
+A responsive personal website showcasing professional skills, projects, and contact information, built with raw HTML/CSS and React technologies.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Project Overview
+
+This website demonstrates a clean, modern web application with multiple routes and Firebase integration.
+
+### Key Features
+
+- **Responsive Design**: Fully mobile and desktop compatible
+- **React Router**: Smooth, single-page application navigation
+- **Firebase Integration**: Live hosting and Firestore message handling
+
+## Pages
+
+### Home Page
+![Home Page](./Images/Home.jpg)
+
+Landing section introducing personal brand and professional summary.
+
+### Resume
+![Resume Page](./Images/Resume.jpg)
+
+Comprehensive professional experience, skills, and educational background.
+
+### Contact Form
+![Contact Page](./Images/Contact.jpg)
+
+Interactive contact form with Firestore backend for message submission.
+
+### GitHub Projects
+![GitHub Projects](./Images/Github.jpg)
+
+Showcase of coding projects with nested routing and detailed descriptions.
+
+## Technical Stack
+
+- React
+- React Router
+- Firebase Firestore
+- Firebase Hosting
+- Raw CSS
+- HTML5
+
+## Deployment
+
+Hosted live on Firebase, ensuring high performance and reliability.
