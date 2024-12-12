@@ -3,10 +3,10 @@ import { doc, setDoc, getDoc, } from 'firebase/firestore'
 import { db } from '../FirebaseConfig'
 
 function Contact() {
-
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [showModal, setShowModal] = useState(false);
 
   const styles = {
     body: {
@@ -92,6 +92,48 @@ function Contact() {
     },
   };
 
+
+  const modalStyles = {
+    overlay: {
+      position: 'fixed',
+      top: 0,
+      left: 0,
+      right: 0,
+      bottom: 0,
+      backgroundColor: 'rgba(0, 0, 0, 0.75)',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      zIndex: 1000,
+    },
+    modal: {
+      backgroundColor: '#1e1e1e',
+      padding: '20px',
+      borderRadius: '8px',
+      boxShadow: '0 2px 10px rgba(187, 134, 252, 0.3)',
+      textAlign: 'center',
+      maxWidth: '300px',
+      width: '100%',
+    },
+    modalText: {
+      color: '#e0e0e0',
+      fontSize: '1.2em',
+      marginBottom: '20px',
+    },
+    closeButton: {
+      backgroundColor: '#bb86fc',
+      color: '#121212',
+      border: 'none',
+      borderRadius: '4px',
+      padding: '10px 20px',
+      fontSize: '1em',
+      cursor: 'pointer',
+    },
+  };
+
+
+
+
   return (
     <div style={styles.body}>
       <div style={styles.contact}>
@@ -128,14 +170,26 @@ function Contact() {
         <button style={styles.sendButton} aria-label="Send Message"
           onClick={() => {
             (async () => {
-              const docRef = doc(db, 'test', name); // Update collection and document path if needed
+              const docRef = doc(db, 'test', name);
               await setDoc(docRef, { email, message });
               console.log('Data added successfully!');
+              setShowModal(true);
             })();
           }}
         >
           Send
         </button>
+
+        {showModal && (
+          <div style={modalStyles.overlay}>
+            <div style={modalStyles.modal}>
+              <p style={modalStyles.modalText}>Your message has been sent.</p>
+              <button style={modalStyles.closeButton} onClick={() => setShowModal(false)}>
+                Close
+              </button>
+            </div>
+          </div>
+        )}
 
      </div>
     </div>
