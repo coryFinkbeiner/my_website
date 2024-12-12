@@ -1,7 +1,5 @@
 # Personal Portfolio Website
 
-![Home Page](./Images/Home.jpg)
-
 A responsive personal website showcasing professional skills, projects, and contact information, built with raw HTML/CSS and React technologies.
 
 ## Project Overview
@@ -27,12 +25,12 @@ Landing section introducing personal brand and professional summary.
 Comprehensive professional experience, skills, and educational background.
 
 ### Contact Form
-![Contact Page](./Images/Contact.jpg)
+![Contact Page](./src/Images/Contact.jpg)
 
 Interactive contact form with Firestore backend for message submission.
 
 ### GitHub Projects
-![GitHub Projects](./Images/Github.jpg)
+![GitHub Projects](./src/Images/Github.jpg)
 
 Showcase of coding projects with nested routing and detailed descriptions.
 
