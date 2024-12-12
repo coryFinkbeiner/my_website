@@ -17,7 +17,7 @@ This website demonstrates a clean, modern web application with multiple routes a
 ## Pages
 
 ### Home Page
-![Home Page](./Images/Home.jpg)
+![Home Page](/Images/Home.jpg)
 
 Landing section introducing personal brand and professional summary.
 
